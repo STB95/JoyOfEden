@@ -1,0 +1,153 @@
+<!DOCTYPE html> <!--start van html file-->
+
+<html lang="nl"> <!--taal, hier nederlands-->
+
+<!--HEAD-->
+
+<head><!--"ONZICHTBAAR" (meta info, titel, links)-->
+  <meta charset="UTF-8"> <!--default, standaard karakterset-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--zorgt voor responsiviteit-->
+
+  <title>Joy of Eden</title>
+
+  <!--tabicoon, foto's geüpload op ibb, gemakkelijk te raadplegen (fixed plaats van opslag)-->
+  <link rel="icon" type="image/png" href="https://i.ibb.co/sjbHC27/favicon.png"> <!--link tag heeft geen closing tag-->
+  <!--rel=type value, href=hyperlink referentie-->
+
+  <!--Google fonts-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=PT+Serif+Caption:ital@0;1&family=Phetsarath:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!--Link voor gebruik externe CSS-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<!--BODY-->
+
+<body>
+  <!--HEADER: Navigatiebalk + tekstlogo-->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="link-logo"> <!--anchor, klik logo? teruggaan naar home-->
+        <img class="logo" src="https://i.ibb.co/zZJfpw1/Joyof-Eden-7-removebg-preview.png" alt="logo" />
+        <!--alle foto's raadpleegbaar op ibb-->
+      </a>
+      <ul class="nav-links"> <!--navigatielinks naar de andere webpagina's, weergave in lijstvorm-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introductie.html">Introductie</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="galerij.html">Plantengalerij</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="links.html">Links</a></li>
+      </ul>
+
+      <!--unicode hamburger icoon, "onclick"=als erop geklikt wordt, klapt open(zie JS code)-->
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <section class="dropdown-menu" id="dropdownMenu"> <!--openklap menu bij gebruik mobiel-->
+        <a href="index.html">Home</a>
+        <a href="introductie.html">Introductie</a>
+        <a href="tips.html">Tips & Tricks</a>
+        <a href="galerij.html">Plantengalerij</a>
+        <a href="contact.html">Contact</a>
+        <a href="links.html">Links</a>
+      </section>
+    </nav>
+  </header>
+
+  <!--MAIN-->
+  <main class="home-page">
+    <section class="content-wrapper">
+      <!--WELKOM tekst-->
+      <!--ik maak gebruik van secties en geen artikels omdat het onderwerp algemeen over planten gaat-->
+      <section class="welcome"> <!--secties omdat samenhang "planten"-->
+        <h1>HARTELIJK WELKOM!</h1>
+        <p>Ontdek hier het "plezier" in tuinieren, stekken, zaaien, verzorgen van planten,... en nog zoveel meer.</p>
+      </section>
+
+      <!--galerij aan foto's met kleine intermezzo's gelinkt aan webpagina's-->
+      <section class="gallery"><!--hoofdsectie-->
+
+        <!--SECTIE1: INTRO--><!---srcset=maakt laden varia resoluties mogelijk ; src >800px en <800px-->
+        <section class="photo"><!--subsecties-->
+          <source srcset="https://i.ibb.co/Qk4YJ2B/introductie-large.jpg" media="(min-width: 800px)">
+          <img src="https://i.ibb.co/Qk4YJ2B/introductie-small.jpg" alt="Intro">
+          <figcaption>Ontwerp van <a href="https://www.freepik.com/">Freepik</a></figcaption>
+          <section class="text-content">
+            <h2>Wie ben ik? Hoe is mijn liefde voor planten ontstaan?</h2>
+            <p>Een uit de PLANT gelopen hobby.</p>
+            <a href="introductie.html" class="button">Lees meer</a>
+          </section>
+        </section>
+
+        <!--SECTIE2: TIPS-->
+        <section class="photo">
+          <source srcset="https://i.ibb.co/P6SWKn1/tips-large.jpg" media="(min-width: 800px)">
+          <img src="https://i.ibb.co/P6SWKn1/tips-small.jpg" alt="Tips">
+          <figcaption>Ontwerp van <a href="https://www.freepik.com/">Freepik</a></figcaption>
+          <section class="text-content"> <!--subsectie binnen een sectie-->
+            <h2>Blazen jouw planten telkens weer hun laatste adem uit?</h2>
+            <p>Enkele tips & tricks kan je hier raadplegen.</p>
+            <a href="tips.html" class="button">Lees meer</a>
+          </section>
+        </section>
+
+        <!--SECTION OVER FOTO's-->
+        <section class="photo">
+          <source srcset="https://i.ibb.co/MsBrbZ5/galery-large.jpg" media="(min-width: 800px)">
+          <img src="https://i.ibb.co/MsBrbZ5/galery-small.jpg" alt="Fotogalerij" class="responsive-img">
+          <figcaption>Ontwerp van <a href="https://www.freepik.com/">Freepik</a></figcaption>
+          <section class="text-content">
+            <h2>Plant "in the picture" met leuke weetjes.</h2>
+            <p>Foto's en "fun facts" over verschillende planten.</p>
+            <a href="galerij.html" class="button">Lees meer</a></div>
+          </section>
+        </section>
+
+        <!--SECTION OVER CONTACT --><!---srcset=maakt laden varia resoluties mogelijk ; src >800px-->
+        <section class="photo">
+          <source
+            srcset="https://i.ibb.co/gFfL8Kc/young-bearded-gardener-man-wearing-jumpsuit-hat-holding-potted-plant-being-amazed-surprised-large.jpg"
+            media="(min-width: 800px)">
+          <img
+            src="https://i.ibb.co/gFfL8Kc/young-bearded-gardener-man-wearing-jumpsuit-hat-holding-potted-plant-being-amazed-surprised-small.jpg"
+            alt="Foto 1" class="responsive-img">
+          <figcaption>Ontwerp van <a href="https://www.freepik.com/">Freepik</a></figcaption>
+          <div class="text-content">
+            <section class="text-content">
+              <h2>S.O.S Plant</h2>
+              <p>Zit je toch nog met enkele vragen? Weet je niet wat te doen of hoe je planten te verzorgen? Stel ze
+                hier.</p>
+              <a href="contact.html" class="button">Lees meer</a>
+          </div>
+        </section>
+      </section>
+
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <section class="footer-content">
+      <p>&copy; 2024 Joy of Eden, ontworpen door Sarah Turner Burkitt.</p>
+      <p>Iconen werden ontworpen door <a href="https://icons8.com/">Icons8</a>.</p>
+      <br>
+      <h3>Volg ons op sociale media!</h3>
+      <section class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="icon">
+          <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" />
+        </a>
+        <a href="https://twitter.com" target="_blank" class="icon">
+          <img src="https://img.icons8.com/ios-filled/50/circled-x.png" alt="X" />
+        </a>
+        <a href="https://instagram.com" target="_blank" class="icon">
+          <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
+        </a>
+      </section>
+    </section>
+  </footer>
+  <!--gebruik van JS voor togglen hamburgermenu-->
+  <script src="script.js"></script> <!--OF kan ook geplaatst worden in <head>-->
+</body>
+
+</html>

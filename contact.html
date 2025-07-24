@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--start van html file-->
+
+<html lang="nl">
+<!--taal, hier nederlands-->
+
+<!--HEAD-->
+
+<head>
+    <!--"ONZICHTBAAR" (meta info, titel, links)-->
+    <meta charset="UTF-8" />
+    <!--default, standaard karakterset-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--zorgt voor responsiviteit-->
+
+    <title>Contactformulier</title>
+
+    <!--tabicoon, foto's geüpload op ibb, gemakkelijk te raadplegen (fixed plaats van opslag)-->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/sjbHC27/favicon.png" />
+    <!--link tag heeft geen closing tag-->
+    <!--rel=type value, href=hyperlink referentie-->
+
+    <!--Google fonts-->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=PT+Serif+Caption:ital@0;1&family=Phetsarath:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!--Link voor gebruik externe CSS-->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<!--BODY-->
+
+<body>
+    <!--HEADER: Navigatiebalk + tekstlogo-->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="link-logo">
+                <!--anchor, klik logo? teruggaan naar home-->
+                <img class="logo" src="https://i.ibb.co/zZJfpw1/Joyof-Eden-7-removebg-preview.png" alt="logo" />
+                <!--alle foto's raadpleegbaar op ibb-->
+            </a>
+            <ul class="nav-links">
+                <!--navigatielinks naar de andere webpagina's, weergave in lijstvorm-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introductie.html">Introductie</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="galerij.html">Plantengalerij</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+
+            <!--unicode hamburger icoon, "onclick"=als erop geklikt wordt, klapt open(zie JS code)-->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <section class="dropdown-menu" id="dropdownMenu">
+                <!--openklap menu bij gebruik mobiel-->
+                <a href="index.html">Home</a>
+                <a href="introductie.html">Introductie</a>
+                <a href="tips.html">Tips & Tricks</a>
+                <a href="galerij.html">Plantengalerij</a>
+                <a href="contact.html">Contact</a>
+                <a href="links.html">Links</a>
+            </section>
+        </nav>
+    </header>
+
+    <!--MAIN-->
+    <main>
+        <section class="page-wrapper">
+            <section class="container">
+                <section class="image-section">
+                    <img src="https://i.ibb.co/QfXWpDh/plantmom.jpg" alt="Contact image">
+                    <figcaption>
+                        Ontworpen door <a href="https://www.freepik.com/">Freepik </a>
+                    </figcaption>
+                </section>
+                <section class="form-section">
+                    <h2>Contacteer ons</h2>
+                    <form id="contactForm" onsubmit="showSuccessMessage(event)">
+                        <table class="form-table"> <!--om tekst mooi uit te lijnen wordt er best een tabel gebruikt-->
+                            <tr>
+                                <td colspan="2">
+                                    <p>
+                                        Zit je toch nog met vragen of heb je hulp nodig in verband met een specifieke
+                                        plant?
+                                        Contacteer ons door dit formulier in te vullen of stuur ons een e-mail op
+                                        <em>Contact@JoyofEden.be</em>.Wij zullen zo snel mogelijk contact met u opnemen. <!--mailto...-->
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label for="voornaam">Voornaam:</label></td>
+                                <td><input type="text" id="voornaam" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="familienaam">Familienaam:</label></td>
+                                <td><input type="text" id="familienaam" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="email">E-mail adres:</label></td>
+                                <td><input type="email" id="email" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="gemeente">Gemeente:</label></td>
+                                <td><input type="text" id="gemeente" required></td>
+                            </tr>
+                            <tr>
+                                <td><label>Geslacht:</label>
+                                </td>
+                                <td><input type="radio" id="man" name="geslacht" value="man" required ,label for="man" class="form-label">Man</label> 
+                                    <br> <!--met break krijg ik ze verticaal onder elkaar geplaatst-->
+                                    <input type="radio" id="vrouw" name="geslacht" value="vrouw" required ,label for="vrouw" class="form-label">Vrouw</label>
+                                </td>
+                            </tr>
+                            <br>
+                            <tr>
+                                <td>
+                                    <label>Welk niveau van tuinier ben jij?</label>
+                                </td>
+                            </tr>
+                            <td></td>
+                            <td><input type="radio" id="groentje" name="niveau" value="groentje" label for="groentje" class="form-label">Nog een "groentje" in de plantentuin</label>
+                                <br>
+                                <input type="radio" id="expert" name="niveau" value="expert" label for="expert" class="form-label">Ik durf mezelf wel expert noemen met mijn groene
+                                vingers</label>
+                                <br>
+                                <input type="radio" id="weetje" name="niveau" value="weetje" label for="weetje" class="form-label">Ik weet er iets vanaf,ik ben getriggerd om meer
+                                    te weten te komen!</label>
+                            </td>
+                            <tr>
+                                <td>
+                                    <label for="blij">Hoe blij maken planten jou op een schaal van 0 t.e.m 10? </label>
+                                </td>
+                                <td>
+                                    <label class="form-label">0</label><input type="range" id="blij" min="low" max="10"><label class="form-label">10</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="geboortedatum">Geboortedatum:</label>
+                                </td>
+                                <td>
+                                    <input type="date" id="geboortedatum" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Ben je meer fan van binnenplanten of eerder de groenste tuinier ooit?</label>
+                                </td>
+                                <td>
+                                    <input type="radio" id="binnenplant" name="fan" value="binnenplant" label for="binnenplant" class="form-label">Binnenplant lover</label><br>
+                                    <input type="radio" id="tuinier" name="fan" value="tuinier" label for="tuinier" class="form-label">Gardenbeauty</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="opmerkingen">Opmerkingen:</label>
+                                </td>
+                                <td>
+                                    <textarea placeholder="Typ hier uw bericht..." required></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <button type="submit">Verzend</button>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                </section>
+            </section>
+        </section>
+        <section id="successMessage" class="hidden">
+            <h2> Uw contactformulier is met succes verstuurd! </h2>
+            <h1>Dank u voor het invullen
+            hiervan en hopelijk tot binnenkort! (Binnen 24 uur kan je zeker een respons terug
+            verwachten :-)</h1>
+            </section>
+    </main>
+</body>
+<script src="script.js"></script>
+<!--FOOTER-->
+<footer class="footer">
+    <section class="footer-content">
+        <p>&copy; December 2024, Joy of Eden,<br> 
+        <p>Een ontwerp van Sarah Turner Burkitt.</p>    </p>
+        <p>
+            Iconen werden ontworpen door <a href="https://icons8.com/">Icons8</a>.
+        </p>
+        <br />
+        <h3>Volg ons op sociale media!</h3>
+        <section class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="icon">
+                <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" />
+            </a>
+            <a href="https://twitter.com" target="_blank" class="icon">
+                <img src="https://img.icons8.com/ios-filled/50/circled-x.png" alt="X" />
+            </a>
+            <a href="https://instagram.com" target="_blank" class="icon">
+                <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
+            </a>
+        </section>
+    </section>
+</footer>
+
+</html>

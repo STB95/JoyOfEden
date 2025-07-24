@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--start van html file-->
+
+<html lang="nl">
+<!--taal, hier nederlands-->
+
+<!--HEAD-->
+
+<head>
+  <!--"ONZICHTBAAR" (meta info, titel, links)-->
+  <meta charset="UTF-8" />
+  <!--default, standaard karakterset-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--zorgt voor responsiviteit-->
+
+  <title>Joy of Eden</title>
+
+  <!--tabicoon, foto's geüpload op ibb, gemakkelijk te raadplegen (fixed plaats van opslag)-->
+  <link rel="icon" type="image/png" href="https://i.ibb.co/sjbHC27/favicon.png" />
+  <!--link tag heeft geen closing tag-->
+  <!--rel=type value, href=hyperlink referentie-->
+
+  <!--Google fonts-->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=PT+Serif+Caption:ital@0;1&family=Phetsarath:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+
+  <!--Link voor gebruik externe CSS-->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<!--BODY-->
+
+<body>
+  <!--HEADER: Navigatiebalk + tekstlogo-->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="link-logo">
+        <!--anchor, klik logo? teruggaan naar home-->
+        <img class="logo" src="https://i.ibb.co/zZJfpw1/Joyof-Eden-7-removebg-preview.png" alt="logo" />
+        <!--alle foto's raadpleegbaar op ibb-->
+      </a>
+      <ul class="nav-links">
+        <!--navigatielinks naar de andere webpagina's, weergave in lijstvorm-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="introductie.html">Introductie</a></li>
+        <li><a href="tips.html">Tips</a></li>
+        <li><a href="galerij.html">Plantengalerij</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="links.html">Links</a></li>
+      </ul>
+
+      <!--unicode hamburger icoon, "onclick"=als erop geklikt wordt, klapt open(zie JS code)-->
+      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <section class="dropdown-menu" id="dropdownMenu">
+        <!--openklap menu bij gebruik mobiel-->
+        <a href="index.html">Home</a>
+        <a href="introductie.html">Introductie</a>
+        <a href="tips.html">Tips & Tricks</a>
+        <a href="galerij.html">Plantengalerij</a>
+        <a href="contact.html">Contact</a>
+        <a href="links.html">Links</a>
+      </section>
+    </nav>
+  </header>
+
+  <!--MAIN-->
+  <main>
+    <section class="content-wrapper2">
+      <section class="text-content2">
+        <article>
+          <h1>Over mezelf: Hoe ben ik tot deze hobby gekomen?</h1>
+          <p>Mijn naam is Sarah en ik ben gepassioneerd door planten, tuinieren en de natuur.
+            Hier zal ik mijn verhaal delen dat leidde tot het ontstaan van mijn uit de "PLANT" gelopen hobby.</p>
+          <br>
+          <section>
+            <h1>Mijn persoonlijkheid</h1>
+            <p>Qua persoonlijkheid toonde ik vroeger vooral interesse in sport. Ik had geen andere hobby's en ook geen
+              andere interesses. Ik smeet mij in mijn sporten en het was voor mij de ultieme uitlaatklep. Ik spreek
+              hier in verleden tijd maar eigenlijk hou ik nog altijd ontzettend veel van sporten.</p>
+            <p>Helaas heb ik een
+              tijdje geleden, toen ik 19 jaar was (al 10 jaar geleden..oef de tijd vliegt),een blessure opgelopen
+              tijdens krav maga waarbij ik welgeteld, niet 1, niet 2, maar 3 hernia's bleek te hebben.</p>
+            <br>
+            <p>Ik kon niet meer lopen en ik moest 2 jaar in revalidatie om mijn rug terug te kunnen rechten.
+              Uiteindelijk ging ik stap per stap weer de goeie richting uit maar merkte ik dat ik meer moest opletten
+              met bepaalde bewegingen vanwege een zwakke rug. De dokter vertelde mij dat ik beter stopte met die
+              specifieke gevechtssport en beter een andere hobby zou zoeken. Ik was teleurgesteld en geschokt omdat ik
+              sporten zo leuk vond, ik wilde het niet opgeven maar ik heb wel de handdoek in de ring gelegd voor mijn
+              passie voor de gevechtssport "Krav Maga".</p>
+          </section>
+
+          <section>
+            <h1>Een prachtige winkel te Gent: "Little Green Stories"</h1>
+            <p>Qua persoonlijkheid toonde ik vroeger vooral interesse in sport. Ik had geen andere hobby's en ook geen
+              andere
+              interesses. Ik smeet mij in mijn sporten en het was voor mij de ultieme uitlaatklep. Ik spreek hier in
+              verleden tijd
+              maar eigenlijk hou ik nog altijd ontzettend veel van sporten. Helaas heb ik een tijdje geleden, toen ik
+              19 jaar was
+              (al 10 jaar geleden..oef de tijd vliegt),een blessure opgelopen tijdens krav maga waarbij ik welgeteld,
+              niet 1, niet
+              2, maar 3 hernia's bleek te hebben.</p>
+            <br>
+            <p>
+              Ik leerde kennismaken met planten toen ik met mijn beste vriendin naar een leuke plantenwinkel ging, genaamd "Little Green Stories". 
+              Daar kocht ik mijn eerste kamerplant: de Zamioculcas Zamiifolia. En zo, kwam van het een het ander. Dit brengt ons tot nu, waarbij ik een 
+              ware plant whisperer ben geworden.
+            </p>
+          </section>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer class="footer">
+    <section class="footer-content">
+      <p>&copy; 2024 Joy of Eden, ontworpen door Sarah Turner Burkitt.</p>
+      <p>
+        Iconen werden ontworpen door <a href="https://icons8.com/">Icons8</a>.
+      </p>
+      <br />
+      <h3>Volg ons op sociale media!</h3>
+      <section class="social-icons">
+        <a href="https://facebook.com" target="_blank" class="icon">
+          <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" />
+        </a>
+        <a href="https://twitter.com" target="_blank" class="icon">
+          <img src="https://img.icons8.com/ios-filled/50/circled-x.png" alt="X" />
+        </a>
+        <a href="https://instagram.com" target="_blank" class="icon">
+          <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
+        </a>
+      </section>
+    </section>
+  </footer>
+  <!--gebruik van JS voor togglen hamburgermenu-->
+  <script src="script.js"></script>
+  <!--OF kan ook geplaatst worden in <head>-->
+</body>
+</html>

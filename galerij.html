@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--start van html file-->
+
+<html lang="nl">
+<!--taal, hier nederlands-->
+
+<!--HEAD-->
+
+<head>
+    <!--"ONZICHTBAAR" (meta info, titel, links)-->
+    <meta charset="UTF-8" />
+    <!--default, standaard karakterset-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--zorgt voor responsiviteit-->
+
+    <title>Joy of Eden</title>
+
+    <!--tabicoon, foto's geüpload op ibb, gemakkelijk te raadplegen (fixed plaats van opslag)-->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/sjbHC27/favicon.png" />
+    <!--link tag heeft geen closing tag-->
+    <!--rel=type value, href=hyperlink referentie-->
+
+    <!--Google fonts-->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=PT+Serif+Caption:ital@0;1&family=Phetsarath:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+
+    <!--Link voor gebruik externe CSS-->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<!--BODY-->
+
+<body>
+    <!--HEADER: Navigatiebalk + tekstlogo-->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="link-logo">
+                <!--anchor, klik logo? teruggaan naar home-->
+                <img class="logo" src="https://i.ibb.co/zZJfpw1/Joyof-Eden-7-removebg-preview.png" alt="logo" />
+                <!--alle foto's raadpleegbaar op ibb-->
+            </a>
+            <ul class="nav-links">
+                <!--navigatielinks naar de andere webpagina's, weergave in lijstvorm-->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="introductie.html">Introductie</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="galerij.html">Plantengalerij</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+
+            <!--unicode hamburger icoon, "onclick"=als erop geklikt wordt, klapt open(zie JS code)-->
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+            <section class="dropdown-menu" id="dropdownMenu">
+                <!--openklap menu bij gebruik mobiel-->
+                <a href="index.html">Home</a>
+                <a href="introductie.html">Introductie</a>
+                <a href="tips.html">Tips & Tricks</a>
+                <a href="galerij.html">Plantengalerij</a>
+                <a href="contact.html">Contact</a>
+                <a href="links.html">Links</a>
+            </section>
+        </nav>
+    </header>
+
+    <!--MAIN-->
+    <main>
+        <section class="content-wrapper2">
+            <header>
+                <h1>De plantengalerij<h1>
+                <br>
+                <p>Benieuwd naar de 5 foto's die ik gekozen heb om iets over te vertellen?<br> Bekijk ze hieronder!</p>
+            </header>
+            <section class="slides-wrapper">
+                <section class="slideshow-container">
+                    <section class="slide">
+                        <section class="slide-image">
+                            <img src="https://i.ibb.co/dGhFSDS/zz.jpg" alt="Foto 1">
+                            <figcaption>
+                                Ontworpen door <a href="www.freepik.com">Freepik</a>
+                            </figcaption>
+                        </section>
+                        <section class="slide-text">
+                            <p>Zamioculcas Zamiifolia:
+                                Mijn allerrreerste kamerplant!
+                                Een superleuke plant die snel groeit mits goeie zorgen.
+                                Het is een goede beginnersplant als je nieuw bent tot de wereld
+                                van kamerplanten.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="slide">
+                        <section class="slide-image">
+                            <img src="https://i.ibb.co/fnMVX7g/monstera.jpg" alt="Foto 2">
+                            <figcaption>
+                                Ontworpen door <a href="www.freepik.com">Freepik</a>
+                            </figcaption>
+                        </section>
+                        <section class="slide-text">
+                            <p>Monstera deliciosa (Een waar, "Delicious" zicht voor het oog).
+                                Het is een eye-candy in je living die direct opvalt door zijn mooie grote bladeren.
+                                De Monstera deliciosa wordt ookwel de gaatjesplant genoemd omdat hij in al zijn bladeren
+                                gaten heeft.
+                                Het is een plant die veel water nodig heeft en dus enorm apprecieërd. Je kan deze plant
+                                dus nooit
+                                té veel water geven. Ideaal dus voor de mensen die planten snel dood krijgen door
+                                overwateren.
+                            </p>
+                        </section>
+                    </section>
+                    <section class="slide">
+                        <section class="slide-image">
+                            <img src="https://i.ibb.co/jRS31Kz/coleus-3.jpg" alt="Foto 3">
+                            <figcaption>
+                                Ontworpen door <a href="www.freepik.com">Freepik</a>
+                            </figcaption>
+                        </section>
+                        <section class="slide-text">
+                            <p>De siernetel (Coleus). Een plant waar ik snel op verliefd ben geworden.
+                                Deze plant bestaat maar liefst uit duizenden soorten en in verschillende varianten van
+                                kleur
+                                en bladvorm. Je kunt je dus zeker niet vervelen aan deze plant want hij heeft een
+                                uitgebreid
+                                assortiment aan keuze. De plant is nog niet zo bekend in België maar het is wel aan het
+                                opkomen.
+                                De plant is heel sierlijk en groeit enorm snel in de zomer. Het is de ideale plant om er
+                                een
+                                "Bonsai" (manier van snoeien) kunstwerk van te maken. </p>
+                        </section>
+                    </section>
+                    <section class="slide">
+                        <section class="slide-image">
+                            <img src="https://i.ibb.co/c20KcTG/cactus.jpg" alt="Foto 4">
+                            <figcaption>
+                                Ontworpen door <a href="www.freepik.com">Freepik</a>
+                            </figcaption>
+                        </section>
+                        <section class="slide-text">
+                            <p>De cactus.Zeer courant komt deze plant voor bij de "plantdads".
+                                Gemakkelijk in gebruik en gaat normaaal gezien niet snel dood (afrader voor de mensen
+                                die planten op regelmatige basis te veel water geven).
+                            </p>
+                        </section>
+                    </section>
+                    <section class="slide">
+                        <section class="slide-image">
+                            <img src="https://i.ibb.co/qpjRsFw/calathea.jpg" alt="Foto 5">
+                            <figcaption>
+                                Ontworpen door <a href="www.freepik.com">Freepik</a>
+                            </figcaption>
+                        </section>
+                        <section class="slide-text">
+                            <p>Een gewaarschuwde plantenliefhebber is er twee waard.
+                                De "Calathea", ookwel bekend onder de naam "Dramathea".
+                                Het is één van de moeilijkste binnenplanten in onderhoud.
+                                Hij trekt gemakkelijk ziektes aan en zal al snel een slap gezicht (aka blaadjes)
+                                trekken als hij zijn plaats in de woning niet aanstaat.
+                                Deze plant is gemakkelijk te herkennen aan de onderkant van het blad: een paarse kleur.
+                                Dit is altijd zo. Let dus op als je op een "shopping spree" gaat voor kamerplanten:
+                                als het blad aan de onderkant volledig paars is, mag je er 99,9% van uitgaan dat het een
+                                Calathea is.
+                            </p>
+                        </section>
+                    </section>
+                <!-- Navigatie pijlen -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </section>
+            </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <section class="footer-content">
+            <p>&copy; December,2024 Joy of Eden, ontworpen door Sarah Turner Burkitt.</p>
+            <p>
+                Iconen werden ontworpen door <a href="https://icons8.com/">Icons8</a>.
+            </p>
+            <br />
+            <h3>Volg ons op sociale media!</h3>
+            <section class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="icon">
+                    <img src="https://img.icons8.com/fluency/48/facebook-new.png" alt="Facebook" />
+                </a>
+                <a href="https://twitter.com" target="_blank" class="icon">
+                    <img src="https://img.icons8.com/ios-filled/50/circled-x.png" alt="X" />
+                </a>
+                <a href="https://instagram.com" target="_blank" class="icon">
+                    <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" />
+                </a>
+            </section>
+        </section>
+    </footer>
+    <!--gebruik van JS voor togglen hamburgermenu-->
+    <script src="script.js"></script>
+    <!--OF kan ook geplaatst worden in <head>-->
+</body>
+
+</html>
