@@ -1,2 +1,2 @@
 # JoyOfEden
-Eigen website creatie
+My own website creation
